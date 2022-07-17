@@ -1,4 +1,5 @@
 # task_manager
+A simple task manager 
 
 ## Project setup
 ```
