@@ -1,6 +1,7 @@
 <template>
-    <div class="task">
-        <h3>{{ task.text }}</h3>
+    <div :class="[task.reminder ? 'reminder' : '', 'task' ]">
+        <h3>{{ task.text }} 
+        <i class="fas fa-times"></i></h3>
         <p>{{ task.day }}</p>
     </div>
 </template>
@@ -16,7 +17,9 @@ export default {
 
 //we can also scope the styling here
 <style>
-
+.fas{
+    color: red;
+}
 .task {
     background: #f4f4f4;
     margin: 5px;
@@ -29,7 +32,7 @@ export default {
 }
 
 .task h3 {
-    border-left: flex;
+    display: flex;
     align-items: center;
     justify-content: space-between;
 }
